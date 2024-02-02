@@ -1,22 +1,118 @@
 /* styles.css */
+
 .App {
     text-align: center;
+    padding: 10px;
   }
   
   .main-content {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 10px;
+    
   }
   
   .left-column, .center-column, .right-column {
     width: 30%;
-    border: 1px solid #ccc;
+   /* border: 3px solid #ccc;  Commented out to remove the border */
     padding: 10px;
   }
   
-  .header, .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-auto-rows: 250px; /* Row height */
+    gap: 10px; /* Gap between grid items */
+    margin: 0px;
   }
+  
+  .grid-item {
+    background-color: rgba(162, 0, 255, 0.103);
+    border: 2px solid #4e025544;
+    padding-left: 10px;
+  }
+
+  /* New CSS for mobile devices */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column; /* Stack columns vertically */
+    }
+  
+    .left-column, .center-column, .right-column {
+      width: 100%; /* Make columns take full width on smaller screens */
+      margin-bottom: 20px; /* Add spacing between stacked columns */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+      }
+  }
+  
+  .header, .footer {
+    padding: 20px;    
+  }
+  
+  h2 {
+    color: #4e0255;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:150%;
+  }
+
+  h3 {
+    color: #4e0255;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+  }
+
+  h4{
+    color: #4e0255;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    font-size:90%;
+  }
+  
+  .contact-link, a {
+    color: #4e0255;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 120%;
+    text-decoration: none;
+  }
+
+  .foot01 {
+    text-align: left;
+  }
+
+  .main-header-block {
+    padding: 2%;
+    background-color: rgba(64, 10, 95, 0.103);
+    border: 2px solid #4e025544;
+    font-size:110%;
+    
+  }
+  .header-block {
+    background-color: rgb(230, 230, 230);
+    border: 2px solid #4e025544;
+  }
+
+  .logo01 {
+    text-align: left;
+    padding: 3%;
+  }
+
+  .body-full-block {
+    padding: 2%;
+    margin-bottom: 0%;
+    background-color: rgba(162, 0, 255, 0.103)
+  }
+  .body-text {
+    text-align: left;
+  }
+  .body-text-small {
+    text-align: left;
+    font-size:90%;
+  }
+
+
